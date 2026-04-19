@@ -21,7 +21,7 @@ Philomathic is an autonomous research system that leverages a team of specialize
 ---
 
 ## 🏗️ Architecture
-![Architecture Diagram](docs/architecture.png)
+![Architecture Diagram](docs/architecture.svg)
 
 ```mermaid
 graph TD
