@@ -2,6 +2,9 @@
 AI-powered autonomous research pipeline using specialized agents to gather, synthesize, and critique information.
 **Topic Input → Web Search → Deep Scraping → Report Generation → Expert Critique**
 
+[🚀 Live App](https://philomathic.streamlit.app/)
+
+
 ---
 
 ## 📸 Demo
