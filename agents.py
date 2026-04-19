@@ -30,21 +30,37 @@ def build_reader_agent():
 #writer chain 
 
 writer_prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are an expert research writer. Write clear, structured and insightful reports."),
-    ("human", """Write a detailed research report on the topic below.
+    ("system", "You are an expert research writer and senior analyst. Write clear, structured, and visually appealing reports."),
+    ("human", """Write a highly structured research report on the topic below.
 
 Topic: {topic}
 
 Research Gathered:
 {research}
 
-Structure the report as:
-- Introduction
-- Key Findings (minimum 3 well-explained points)
-- Conclusion
-- Sources (list all URLs found in the research)
+Structure the report EXACTLY as follows:
 
-Be detailed, factual and professional."""),
+# [An Engaging Title for the Report]
+
+## Key Insights
+- Insight 1
+- Insight 2
+- Insight 3
+
+## [Section 1 Title]
+...content...
+
+## [Section 2 Title]
+...content...
+
+## References
+- [Source Title 1](URL 1)
+- [Source Title 2](URL 2)
+
+Rules:
+- Be detailed, factual, and professional.
+- Use well-spaced paragraphs and bullet points for readability.
+- The "References" section must strictly be a bulleted list of markdown links: `- [Title](URL)`"""),
 ])
 
 writer_chain = writer_prompt | llm | StrOutputParser()
