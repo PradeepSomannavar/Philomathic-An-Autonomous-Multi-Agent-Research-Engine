@@ -23,23 +23,6 @@ Philomathic is an autonomous research system that leverages a team of specialize
 ## 🏗️ Architecture
 ![Architecture Diagram](docs/architecture.svg)
 
-```mermaid
-graph TD
-    User([User Input]) --> UI[Streamlit UI Layer]
-    UI --> Search[Search Agent<br/>LangChain + Tavily]
-    UI --> Reader[Reader Agent<br/>LangChain + Scraper]
-    Search --> Combined[Combined Research Context]
-    Reader --> Combined
-    Combined --> Writer[Writer Chain<br/>Gemini Pro]
-    Writer --> Report[Draft Report]
-    Report --> Critic[Critic Chain<br/>Expert Review]
-    Critic --> Final[Final Outputs]
-    Final --> MD[Markdown Report]
-    Final --> PDF[PDF Export]
-    Final --> FB[Critic Feedback]
-```
-
----
 
 ## ✨ Features
 | Feature | Description |
