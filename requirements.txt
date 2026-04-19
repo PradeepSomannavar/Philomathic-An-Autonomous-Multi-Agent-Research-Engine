@@ -2,10 +2,11 @@
 langchain>=0.2.0
 langchain-core>=0.2.0
 langchain-community>=0.2.0
-langchain-openai>=0.1.0
+langchain-google-genai>=0.1.0
+streamlit>=1.30.0
 
-# OpenAI
-openai>=1.30.0
+# OpenAI (kept for compatibility or other agents if needed, but primary is Gemini)
+# langchain-openai>=0.1.0
 
 # Tavily Search Tool
 tavily-python>=0.3.0
